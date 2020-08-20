@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+}
+h2 {
+    color: aquamarine;
+}
+h3 {
+    color: blueviolet;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6
+ }
