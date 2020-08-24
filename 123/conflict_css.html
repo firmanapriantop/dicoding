@@ -1,19 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <title>Judul Berkas</title>
+   <title>Judul Dokumen</title>
    <style>
-       p {
-           color: red !important;
-       }
- 
-       p {
-           color: blue;
-       }
+      #special {
+          background-color: skyblue;
+      }
+      p {
+          color: aquamarine;
+      }
    </style>
 </head>
 <body>
-<p>Sesuai dengan namanya cascading yang artinya <q>mengalir</q>, alur kerja CSS dalam membaca kode pun seperti itu.
-   Mengalir dari atas ke bawah sehingga kita harus memperhatikan urutan dalam penulisan rules <i>styling</i></p>
+<div id="special">
+   <p>Ini merupakan konten di dalam sebuah div yang diberi id special.</p>
+</div>
+<div>
+   <p>Ini merupakan konten di dalam sebuah div biasa.</p>
+</div>
 </body>
 </html>

@@ -1,0 +1,35 @@
+Requirement ToolsRequirement ToolsRequirement Tools
+Terdapat tools yang harus kita siapkan sebelumnya untuk mengikuti kelas ini, yaitu Text Editors dan Browser.
+
+Text Editors
+Dalam mengembangkan sebuah website, tentu kita akan banyak menuliskan sebuah kode HTML, CSS, maupun JavaScript. Maka dari itu, langkah awal yang harus kita siapkan adalah sebuah text editor. Beberapa sistem operasi sebenarnya sudah menyediakan text editor usungannya sendiri. Contohnya Windows memiliki Notepad, Linux memiliki Text Editors dan Macintosh memiliki TextEdit. Ketiga aplikasi tersebut bisa kita gunakan untuk belajar membuat sebuah website, meskipun masih banyak alternatif text editor lainnya selama masih dapat menyimpan sebuah plain text dengan format .html.
+
+Perlu diperhatikan bahwa kode yang kita tuliskan merupakan sebuah plain text. Pastikan kita menggunakan text editor yang tepat. Jangan pernah menggunakan Microsoft Word untuk menuliskan sebuah kode, karena aplikasi tersebut menampilkan teks yang telah diformat atau biasa disebut dengan rich text.
+
+Selain text editors usungan sistem operasi yang kita gunakan, berikut tiga text editor lainnya yang bisa kita gunakan untuk membuat sebuah website.
+
+Visual Studio Code
+Visual Studio Editor merupakan sebuah text editor yang dikembangkan oleh Microsoft. Dalam text editor ini terdapat fitur debugging, Git control, syntax highlighting, code completion, snippets, dan code refactoring. Visual Studio Code tersedia untuk sistem operasi Windows, Mac maupun Linux, dan tentunya text editor ini bisa kita gunakan secara gratis. Untuk mengunduhnya silakan kunjungi website berikut: https://code.visualstudio.com/
+
+Atom Editor
+Atom merupakan text editor gratis dan juga open source untuk Windows, Linux, dan MacOS. Sama seperti Visual Studio Editor, kedua text editor ini merupakan editor yang populer digunakan oleh web developer. Untuk mengunduhnya, silakan kunjungi website berikut: https://atom.io/
+
+Emacs
+
+
+20191203160508b9798fe38200c51829689bd5cb582a46.png
+
+Editor ini mungkin tidak secanggih opsi-opsi sebelumnya dalam menuliskan kode HTML, CSS, dan JavaScript. Namun, jika kalian tertarik belajar melalui proses tanpa fitur yang mempermudah kita dalam menuliskan sebuah kode, maka text editor ini cocok untuk dicoba. Emacs memiliki fitur yang tidak disangka-sangka untuk sebuah text editor, seperti news reader, kalkulator, dan fitur untuk enkripsi/dekripsi file. Emacs tersedia untuk Windows, Macs, maupun Linux secara gratis. Untuk mencobanya, kalian bisa mengunjungi halaman website berikut: https://www.gnu.org/software/emacs/
+
+
+
+Browser
+Seperti yang sudah kita ketahui, untuk mengakses website membutuhkan sebuah browser. Tentu untuk mengembangkan website juga diperlukan sebuah browser untuk melihat seperti apa tampak website yang sedang kita kembangkan. Kita bisa menggunakan browser apa pun untuk mengunjungi sebuah website, tetapi hasil yang ditampilkan mungkin dapat berbeda pada di setiap browser. Walaupun tampilan pada setiap browser berbeda, pada kelas ini kalian tidak perlu mencobanya satu per satu untuk melihatnya pada masing - masing browser. Kami sarankan Anda untuk menggunakan browser yang populer yaitu Google Chrome atau Mozilla Firefox. 
+
+Seperti text editor, sebenarnya sistem operasi sudah mempunyai browser usungannya masing-masing, misal Microsoft Edge di Windows dan Safari di MacOS. Akan tetapi kedua browser tersebut tidak memiliki fitur developer tools atau Dev Tools seperti yang dimiliki oleh Google Chrome dan Mozilla Firefox.
+
+Developer Tools atau Dev Tools merupakan alat yang dapat digunakan untuk melakukan debugging pada sebuah website. Dev Tools ini merupakan tools yang andal dalam mencari suatu bugs dan memperbaikinya. Bahkan kita dapat mensimulasikan tampilan website pada sebuah layar smartphone, sehingga tak perlu repot-repot memakai smartphone untuk melihat responsibilitas website yang kita kembangkan.
+
+Untuk yang sudah menginstal Google Chrome atau Mozilla Firefox, artinya kalian siap untuk menuju modul selanjutnya. Jika belum, kalian bisa mengunduhnya pada website berikut:
+Halaman unduh Mozilla Firefox.
+Halaman unduh Google Chrome.

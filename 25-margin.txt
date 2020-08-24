@@ -1,0 +1,29 @@
+Margin
+Seperti halnya padding, margin merupakan ruang atau jarak pada sebuah elemen. Namun jarak tersebut terletak di luar dari konten dan border elemen. Margin digunakan untuk menjaga elemen agar tidak bertabrakan satu sama lain atau dari tepi jendela browser.
+
+20191206210141ce820f9d08c34ad72fc7bba057d18cc4.png
+
+Sebelum menerapkan margin
+
+
+
+2019120621023166ba8e1d60ab813e047cb14a7fe7d209.png
+
+Setelah menerapkan margin 20px.
+
+
+
+Margin ini bersifat collapsed, yang artinya dapat menumpuk jika terdapat dua margin yang saling bertumpukan. Anda bisa melihat pada margin bawah dan margin atas pada kedua elemen tersebut. Hal itu menjelaskan mengapa jarak vertikal antar elemen tersebut tidak 40px melainkan 20px. Jika terjadi pertumpukan margin, maka nilai yang paling besar yang akan diterapkan.
+
+Kita dapat menentukan nilai margin yang berbeda untuk masing-masing sisi elemen dengan menggunakan:
+
+margin-top: 10px;
+margin-right: 15px;
+margin-bottom: 20px;
+margin-left: 25px;
+Tapi kita juga dapat menggunakan shorthand untuk menetapkan keempat nilai tersebut dalam satu properti
+
+margin: 10px 15px 20px 25px;
+Kita juga bisa menggunakan dua nilai saja untuk menentukan nilai margin vertikal dan horizontal.
+
+margin: 10px 15px; /* top dan bottom bernilai 10px, left dan right bernilai 15px */

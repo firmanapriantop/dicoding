@@ -1,0 +1,12 @@
+Anatomi Website
+Kita terbiasa dengan tampilan website yang nampak pada browser, tetapi apakah kalian tahu bagaimana website dapat tampil demikian? Terdapat 3 (tiga) fondasi penting dalam membuat website. Pertama adalah HTML, salah satu markup language yang digunakan untuk membuat struktur dan menampilkan konten pada World Wide Web (Website). CSS dan JavaScript merupakan fondasi lainnya yang digunakan untuk mempercantik dan menjadikan website lebih dinamis dan interaktif.
+
+Sama seperti halnya tubuh manusia yang disusun dari kerangka tulang, HTML pada website berperan sebagai kerangka dasar yang digunakan dalam menampilkan visual pada website. Tapi jika hanya sebatas kerangka, seorang manusia akan terlihat menyeramkan dan aneh bukan? Maka dari itu untuk mempercantik tampilannya kita membutuhkan sebuah kulit. Di sinilah peran CSS. Setelah memiliki kulit dan nampak cantik, selanjutnya kita membutuhkan sebuah otak dan otot agar seorang manusia dapat dinamis dan berinteraksi. Dalam website JavaScript-lah yang berperan dalam membuat website yang dinamis dan interaktif.
+
+
+
+Bagaimana Website bekerja?
+Ketika kita mengunjungi dicoding.com, tentu kita membutuhkan sebuah koneksi internet, karena website memerlukan sebuah web server hosting yang dapat disimpan di mana saja. Ketika kita menuliskan “dicoding.com” dan menekan enter pada browser, hal yang pertama dilakukan browser adalah menghubungi Domain Name System (DNS) server untuk mengarahkan ke alamat server. Kemudian browser mengirimkan sebuah permintaan (request) agar server mengirimkan salinan dari informasi yang nantinya ditampilkan pada client (browser). Jika request tersebut berhasil, maka server menanggapi (response) permintaan tersebut dan mulai mengirimkan salinan yang dibutuhkan secara berangsur. Browser menggabungkan bagian-bagian informasi yang diperoleh untuk kemudian tampil di jendela browser.
+
+Untuk menampilkan informasi pada jendela, browser menggunakan HTML dan CSS yang dikirimkan dari server. Dengan begitu, informasi dalam bentuk HTML dan CSS-lah yang dikirimkan server untuk client (browser). Beberapa halaman website juga membutuhkan informasi ekstra seperti berkas gambar, suara atau video, tetapi berkas tersebut sebenarnya hanya ditanamkan (embed) pada HTML. Dan beberapa halaman website sebenarnya juga membutuhkan JavaScript untuk me-render HTML atau CSS agar dapat menampilkan informasi secara dinamis.
+

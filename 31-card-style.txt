@@ -1,0 +1,46 @@
+Menerapkan card style pada elemen <article>
+Selanjutnya kita atur tampilan pada tiap elemen <article>, buat elemen tersebut bergaya card effect dengan menerapkan properti box-shadow dan border-radius sehingga hasilnya akan tampak seperti ini:
+
+2019120621350666345165184d3711569b2f3d1889a782.png
+
+Pertama kita buat rule baru dengan selector .card, kemudian terapkan properti dan nilainya sebagai berikut:
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+}
+Selanjutnya terapkan rule tersebut pada seluruh elemen <article> yang ada. Untuk menerapkannya, tambahkan atribut class dengan nilai card.
+
+<article id="sejarah" class="card">
+ 
+...
+ 
+<article id="geografis" class="card">
+ 
+...
+ 
+<article id="wisata" class="card">
+...
+ 
+<aside>
+        <article class="profile card">
+....
+
+
+Sekarang tiap sisi elemen <article> akan tampak dikelilingi oleh drop shadow dan memiliki ujung yang bulat pada tiap sisinya.
+
+20191206213704fa910d646a7ba58fa710f40cd8afe96d.png
+
+Jika dirasa drop shadow tak terlalu jelas, kita bisa mengubah nilainya. Agar mudah dalam menentukan nilai drop shadow yang kita inginkan, kita bisa gunakan tools yang tersedia secara online pada tautan berikut: https://www.cssmatic.com/box-shadow.
+
+Selanjutnya kita perbaiki tepian konten pada card karena tampak terlalu sempit dari sisi cardnya. Alhasil, konten agak sulit dibaca. Kita bisa mengaturnya dengan properti margin dan padding. Silakan tambahkan properti dan nilai berikut pada rule .card:
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
+Sekarang konten di dalam card lebih proporsional dan mudah dibaca, bukan?
+
+201912062138535c79ac44e65f9ae9fc10e8c9f81944fe.png

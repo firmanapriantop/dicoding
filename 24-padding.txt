@@ -1,0 +1,37 @@
+Padding
+Padding merupakan jarak antara area konten dan border. Padding banyak diterapkan pada elemen jika elemen tersebut menerapkan warna latar atau pun border. Padding memberikan sedikit ruang sehingga konten di dalam elemen dapat lebih nyaman untuk ditampilkan. Contohnya:
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       p {
+           border: 4px solid #00a2c6;
+           width: 275px;
+       }
+ 
+       p.example {
+           padding: 10px;
+       }
+   </style>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae commodi dignissimos eaque fugiat inventore maiores neque nisi sint. A dolore eaque fuga, iste minus porro provident sit tempore ullam.</p>
+<p class="example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda blanditiis cum dignissimos enim esse excepturi illum inventore maiores minima, nemo nisi obcaecati officia pariatur qui quibusdam sed. Ab, dolorum?</p>
+</body>
+</html>
+
+Seperti yang kita lihat, paragraf kedua jauh lebih nyaman dibaca karena terdapat jarak antara teks dan border dari kotak. Kotak pun menjadi sedikit lebar karena adanya padding.
+
+Pixel merupakan satuan yang sering digunakan dalam menetapkan nilai properti ini (meskipun kita bisa juga menggunakan persentase atau ems). Jika menetapkan menggunakan persentase, maka nilai akan menjadi relatif pada elemen induk atau jendela browser (jika tidak memiliki induk elemen).
+
+Kita dapat menentukan nilai padding yang berbeda untuk masing-masing sisi elemen dengan menggunakan:
+
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px;
+Atau dengan menggunakan shorthand seperti berikut:
+
+padding: 10px 15px 10px 15px;
+Sehingga padding akan diterapkan seperti gambar di bawah ini.

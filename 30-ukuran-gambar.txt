@@ -1,0 +1,42 @@
+Menetapkan ukuran pada gambar
+Sekarang saatnya kita mulai terapkan apa yang baru kita pelajari. Langkah pertama mari kita ubah dimensi dari gambar yang kita tampilkan. Pada berkas style.css, buat rule baru untuk selector .featured-images dengan properti dan nilai sebagai berikut:
+
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+}
+Kemudian terapkan rule tersebut pada seluruh elemen gambar kecuali gambar logo kota Bandung yang terdapat di dalam elemen <aside>. Untuk menerapkannya kita tuliskan class atribut dengan nilai featured-image.
+
+<img src="assets/image/history.jpg" class="featured-image" alt="sejarah">
+ 
+...
+ 
+<img src="assets/image/geografis.jpg" class="featured-image" alt="geografis">
+ 
+...
+ 
+<img src="assets/image/farm-house.jpg" class="featured-image" alt="farm house">
+ 
+...
+ 
+<img src="assets/image/bosscha.jpg" class="featured-image" alt="bosscha">
+Setelah menerapkannya maka tampilan gambar akan menjadi seperti ini:
+
+Gambar yang ditampilkan jadi memenuhi lebar jendela browser. Namun karena kita menetapkan juga properti max-height, gambar yang ditampilkan menjadi tidak proporsional. Solusinya kita tambahkan properti object-fit: cover; dan object-position: center; pada .featured-image selector.
+
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+Kedua properti tersebut membuat gambar yang ditampilkan dapat menyesuaikan lebar dan panjang dengan mempertahankan kualitas rasio aslinya. Tetapi untuk menyesuaikannya terdapat area gambar yang terpotong atau tidak ditampilkan, tetapi tampilan gambar akan tetap proporsional.
+
+2019120621300625720639f2d52817ae3ed98f72ed0ea2.png
+
+Selanjutnya kita atur juga ukuran gambar logo kota Bandung pada elemen <aside>. Agar logo tampak tidak terlalu besar kita atur properti width dengan nilai 200px. Silakan buat rules baru dengan selector .profile img, kemudian tuliskan properti width dengan nilainya.
+
+.profile img {
+   width: 200px;
+}
+Sehingga sekarang logo akan nampak lebih kecil.

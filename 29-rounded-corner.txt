@@ -1,0 +1,27 @@
+Rounded Corner
+CSS3 memperkenalkan kemampuan untuk membuat rounded corner atau sudut bundar pada box dengan menggunakan properti border-radius. Nilai dari properti ini merupakan tingkat lengkungan border dalam pixel.
+
+.rounded {
+   border-radius: 10px;
+}
+Jika diterapkan, pinggiran border akan tampak seperti ini:
+
+20191206211525d09ea1b4c4d1371e4f93d924d55fbf2f.png
+
+Kita bisa menetapkan nilai pada individu siku kotak dengan menggunakan properti yang terpisah, seperti ini:
+
+.rounded {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 5px;
+   border-top-left-radius: 10px;
+}
+Atau kita dapat menggunakan shorthand sehingga dapat menetapkan keempat nilainya dalam satu properti.
+
+.rounded {
+   border-radius: 10px 5px 10px 5px;
+}
+Maka tiap sisi dari border memiliki ketajaman yang berbeda seperti ini.
+
+20191206211842d99edad2a74dc38202a7ea2018def708.png
+

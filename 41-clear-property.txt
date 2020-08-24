@@ -1,0 +1,43 @@
+Clear Property
+Cara yang pertama adalah dengan menggunakan properti clear. Properti clear memang dibuat untuk menghilangkan sifat float, dengan demikian elemen yang menerapkan properti float akan kembali “dianggap ada”. Namun untuk menerapkan properti ini kita perlu membuat sebuah elemen kosong (biasanya menggunakan div tanpa konten) yang menerapkan properti clear.
+
+Nilai dari properti clear merupakan nilai yang digunakan pada properti float karena properti clear akan menghapus sifat float sesuai dengan nilai yang ditetapkan. Contohnya seperti ini:
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .container {
+           width: 800px;
+           border: 4px solid black;
+       }
+ 
+       img {
+           float: left;
+           margin: 10px;
+       }
+       .clear {
+           clear: left;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <img src="https://i.imgur.com/cs2BJzw.jpg" width="200px" alt="dicoding">
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci architecto aspernatur dolorem
+       doloremque eum excepturi fuga hic, molestias obcaecati officia perferendis perspiciatis qui saepe ut velit
+       veniam vitae voluptatum.</p>
+   <div class="clear"></div>
+</div>
+</body>
+</html>
+Maka hasilnya akan seperti ini:
+
+20191206224812af0e925353314249f80c76d7103452fe.png
+
+Jika kita mencoba mengubah clear menjadi clear: right;, maka akan kembali seperti hasil sebelum menerapkannya.
+
+2019120622485120d38f8c1f9e107f3aee35dca0887b8e.png
+
+Lalu bagaimana jika terdapat dua elemen yang menerapkan nilai float berbeda (left dan right)?  Terdapat satu nilai lagi yang dapat menghilangkan keuda sifat float tersebut, yakni nilai both. Gunakanlah nilai tersebut jika kita ingin sepenuhnya menghilangkan sifat float pada elemen.
+

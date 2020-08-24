@@ -1,0 +1,15 @@
+Apa yang akan Kita Pelajari?
+Setelah mengetahui tentang anatomi dan bagaimana website bekerja, pada kelas ini kita akan banyak mempelajari dasar HTML, CSS, dan JavaScript yang menjadi inti dari pengembangan website.
+
+Pada modul 2 dan 3 kita akan mempelajari rangkaian penggunaan HTML pada website. Mulai dari pembuatan berkas HTML, mengenal dan menggunakan elemen, serta menampilkan gambar dan penyusunan layout. Kemudian pada modul 4 dan 5 kita akan mempelajari penerapan styling pada website untuk mempercantik dan membantu dalam penyusunan website. Sampai modul ini, kita akan membuat sebuah halaman website yang menarik.
+
+Pada modul 6, kita akan belajar bagaimana cara menyusun layout yang responsif menggunakan flexbox. Selain itu juga terdapat praktik membuat sebuah layout dasar kalkulator pada website.
+
+Sedangkan JavaScript akan dibahas pada modul 7. Di  sana kita akan belajar dasar-dasar dari bahasa pemrograman JavaScript, pengenalan syntax, penggunaan variabel, tipe data yang ada, iterator, dll. Selain itu kita juga akan belajar bagaimana cara memanipulasi “DOM” dengan menggunakan JavaScript sehingga dapat membuat website yang interaktif. 
+
+Pada modul 8, kita akan mempelajari cara mengelola sebuah data atau objek pada local storage ataupun session storage dengan memanfaatkan Web Storage. Sampai modul ini, kita akan membuat sebuah proyek kalkulator sederhana dengan memanfaatkan Web Storage untuk menyimpan histori perhitungannya.
+
+Dan pada akhir pembelajaran, untuk lulus dari kelas ini, terdapat submission alias proyek akhir yang harus Anda kirimkan. Proyek tersebut akan kemudian kami review guna menentukan kelulusan Anda.
+
+Sudah siap belajar dasar pemrograman website? Sebelum memulainya mari kita persiapkan beberapa tools yang akan digunakan pada kelas ini.
+

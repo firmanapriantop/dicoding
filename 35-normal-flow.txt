@@ -1,0 +1,37 @@
+Normal Flow
+Dalam flow normal, setiap elemen block ditempatkan di bawah elemen sebelumnya. Karena ini merupakan cara standar browser memperlakukan elemen HTML, kita tidak perlu menetapkan nilai properti position ketika ingin membuat perilaku seperti ini tetapi secara sintaks perilaku ini ditetapkan dengan nilai static.
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       h1 {
+           background-color: #aaaaaa;
+           padding: 30px;
+       }
+ 
+       p {
+           width: 450px;
+       }
+   </style>
+</head>
+<body>
+<h1>Lorem ipsum dolor sit amet.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iusto non optio vel voluptas? Assumenda
+   blanditiis consequatur doloribus porro quasi similique vero voluptatibus. Adipisci, tenetur.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi consectetur dolore eligendi, esse fuga
+   hic laboriosam nobis nostrum, nulla omnis optio pariatur repellendus reprehenderit saepe, sit soluta vel vero!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut corporis deleniti doloremque et excepturi
+   expedita labore libero, placeat, quaerat rerum ullam vitae voluptate. Accusantium et explicabo qui tenetur unde.
+   Amet aperiam doloremque enim, expedita id illo minima porro quod.</p>
+</body>
+</html>
+Berkas di atas jika kita buka pada browser akan tampak seperti ini:
+
+201912062216568b9826e56c796ef4b9e97be62643ed07.png
+
+Pada contoh di atas kita tidak menetapkan nilai lebar pada elemen heading, tapi bisa kita lihat bahwa elemen heading tersebut mencakup seluruh lebar ruang yang ada pada jendela browser. 
+
+Sedangkan elemen paragraf kita atur lebarnya dengan nilai 450px sehingga elemen tersebut tidak mencakup seluruh lebar ruang yang ada. Elemen paragraf selanjutnya tetap ditampilkan di bawahnya meskipun masih terdapat ruang yang cukup disampingnya.
+
+Hal tersebut merupakan contoh dari gambaran bagaimana flow normal bekerja.

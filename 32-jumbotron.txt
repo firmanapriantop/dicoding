@@ -1,0 +1,63 @@
+Menerapkan Jumbotron dan Navigasi pada header
+Selanjutnya kita akan mengatur header dengan membuat efek jumbotron dan memperbaiki tampilan navigasi menjadi nampak seperti ini:
+
+2019120621431702899e64436e0bf3627131f41d408c38.png
+
+Sebagai angkah awal, yuk kita buat rule baru dengan selector .jumbotron lalu terapkan properti dan nilainya seperti ini:
+
+.jumbotron {
+   font-size: 20px;
+   padding: 60px;
+   background-color: #00c8eb;
+   text-align: center;
+   color: white;
+}
+Lalu pada berkas HTML, letakkan elemen <h1> dan <p> yang terdapat pada <header> dengan menggunakan <div> yang diberikan atribut class jumbotron. Sehingga struktur HTML pada elemen <header> tampak seperti ini:
+
+<header>
+   <div class="jumbotron">
+       <h1>Bandung</h1>
+       <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+   </div>
+   <nav>
+       <ul>
+           <li><a href="#sejarah">Sejarah</a></li>
+           <li><a href="#geografis">Geografis</a></li>
+           <li><a href="#wisata">Wisata</a></li>
+       </ul>
+   </nav>
+</header>
+Sehingga sekarang header akan nampak dengan efek jumbotron.
+
+20191206214458ae2dd2bba5ca43a3b3d4cab6e5c35df5.png
+
+Lanjut, kita akan memperbaiki tampilan navigasi agar terlihat cocok dengan header yang ditampilkan. Seperti biasa, buatlah rule baru dengan selector nav li. Selector tersebut akan mengatur elemen <li> yang menjadi turunan dari elemen <nav>, berikan properti dan nilai berikut pada selector tersebut:
+
+nav li {
+   display: inline;
+   list-style-type: none;
+   margin-right: 20px;
+}
+Nilai inline pada properti display akan membuat elemen <li> menerapkan sifat inline, sehingga elemen akan ditampilkan tanpa membuat baris baru. Dan properti list-style-type dengan nilai none akan menghilangkan tanda titik yang dihasilkan tiap item pada list. Dengan begitu navigasi akan nampak seperti ini:
+
+20191206214743f0be8bd5d7a8b135c574203858e537d8.png
+
+Selanjutnya beri background-color dan ubah warna teks pada navigasi agar nampak sesuai dengan header. Tuliskan rule baru dengan selector nav kemudian atur background-color dan padding dengan nilai berikut:
+
+nav {
+   background-color: #00a2c6;
+   padding: 5px;
+}
+Kemudian untuk mengatur warna teks pada navigasi, kita tambahkan properti color pada selector nav a yang sudah kita buat pada latihan sebelumnya.
+
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+}
+Dengan begitu navigasi akan terlihat sesuai dengan header yang ditampilkan.
+
+20191206214957e6aaaa1aab5abea3d4a5fd98fa5e1c92.png
+
+Pada langkah ini, website yang kita bangun sudah mulai tampak menarik bukan?

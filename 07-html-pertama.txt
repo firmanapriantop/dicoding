@@ -1,0 +1,17 @@
+Membuat berkas HTML Pertama
+Untuk langkah awal tentunya kita membuat sebuah berkas HTML. Kita akan mencoba membuatnya dari nol dengan menggunakan alat yang ada. Gunakanlah text editor usungan sistem operasi masing-masing agar kita tahu bagaimana pengalaman membuat dan menuliskan sebuah kode tanpa bantuan code completion.
+
+
+
+Windows
+Langkah awal dalam membuat berkas HTML adalah kita buka Notepad pada komputer kita. Untuk membukanya bisa melalui beberapa cara, salah satunya melalui fitur Run yang terdapat pada Windows. 
+
+Silakan gunakan kombinasi tombol Windows + R untuk membuka jendela Run, kemudian tuliskan “notepad”
+
+Simpan perubahan pada notepad dengan melakukan Save (Ctrl + S pada keyboard), kemudian pilih lokasi penyimpanan yang kita inginkan. Pada contoh di bawah ini, berkas HTML akan disimpan pada alamat C -> WebDasar.
+
+Lalu di dalam folder WebDasar. Kita simpan berkas dengan nama index.html. Jangan lupa pada bagian Save as type kita pilih “All Files (*.*)” untuk tipe penyimpanannya. Setelah itu, tekan tombol Save.
+
+Selamat! Dengan begitu kita sudah membuat berkas HTML pertama. Silakan buka berkas HTML tersebut menggunakan suatu browser (dalam contoh ini, kita menggunakan Google Chrome), maka hasilnya akan nampak seperti ini:
+
+Informasi yang tampil, nampak berantakan, bukan? Karena standarnya, browser akan mengabaikan penulisan spasi yang dituliskan secara berulang, begitu juga dengan line breaks (garis baru). Untuk menuliskan garis baru pada HTML, kita harus menggunakan sebuah tag <br> yang akan kita bahas pada modul 3.

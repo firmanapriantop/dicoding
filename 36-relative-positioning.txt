@@ -1,0 +1,36 @@
+Relative Positioning
+Seperti yang kita ketahui sebelumnya, dengan menetapkan relative pada properti position, kita dapat melakukan perpindahan posisi elemen ke atas, kanan, bawah, maupun kiri. Perpindahan posisi yang dilakukan tidak akan berpengaruh terhadap posisi elemen di sekitarnya karena dengan  relative positioning, elemen tersebut akan dipindahkan dari normal flow. Untuk menggunakan relative positioning kita tetapkan nilai relative pada properti position.
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       h1 {
+           background-color: #aaaaaa;
+           padding: 30px;
+       }
+ 
+       p {
+           width: 450px;
+       }
+ 
+       .relative {
+           position: relative;
+           top: 10px;
+           left: 100px;
+       }
+   </style>
+</head>
+<body>
+<h1>Lorem ipsum dolor sit amet.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iusto non optio vel voluptas? Assumenda
+   blanditiis consequatur doloribus porro quasi similique vero voluptatibus. Adipisci, tenetur.</p>
+<p class="relative">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi consectetur dolore eligendi, esse fuga hic laboriosam nobis nostrum, nulla omnis optio pariatur repellendus reprehenderit saepe, sit soluta vel vero!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut corporis deleniti doloremque et excepturi expedita labore libero, placeat, quaerat rerum ullam vitae voluptate. Accusantium et explicabo qui tenetur unde. Amet aperiam doloremque enim, expedita id illo minima porro quod.</p>
+</body>
+</html>
+Berkas di atas jika kita buka melalui browser akan tampak seperti:
+
+20191206221937d6e8cea0f0ee9c7b23c0bfbe2436ef0b.png
+
+Pada contoh di atas, setelah menetapkan nilai position pada paragraf kedua, kita mengubah posisinya menjadi 10 pixel lebih bawah dan 100px lebih ke kanan dari posisi yang seharusnya. Perlu kita ingat bahwa perpindahan posisi mengacu pada posisi elemen seharusnya berada.

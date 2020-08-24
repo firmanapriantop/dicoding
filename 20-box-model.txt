@@ -1,0 +1,4 @@
+Box Model
+Pada pembahasan background-color disinggung bahwa setiap elemen ditampilkan seperti sebuah boxes atau kotak. Box model merupakan salah satu konsep dari CSS. Setiap elemen yang dibuat pada HTML akan menciptakan sebuah kotak untuk menampung kontennya.  Layaknya bentuk kotak pada umumnya, pasti terdapat nilai seperti lebar, tinggi, padding (tebal lapisan), border (batas), dan juga jarak. Pada CSS nilai - nilai tersebut dapat kita atur.
+
+Kita mungkin sudah sedikit paham bagaimana konsep box model ini bekerja dengan mengikuti latihan sebelumnya. Di sini kita akan membahas lebih lanjut mengenai properti apa saja yang dapat memanipulasi boxes tersebut. Tapi sebelum itu, kita pahami lebih tentang konsep box pada elemen HTML agar kita dapat gambaran lebih tentang hal tersebut.
