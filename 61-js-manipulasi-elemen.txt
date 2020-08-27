@@ -1,0 +1,102 @@
+Memanipulasi Element
+Setelah kita tahu cara mengakses elemen melalui objek document, sekarang saatnya kita belajar cara memanipulasi elemen yang didapat, seperti mengubah konten, menambahkan atau mengubah nilai atribut, dan menambahkan action/event pada elemen.
+
+Memanipulasi Atribut
+Untuk mengubah atau menambah nilai atribut pada elemen, apa  method yang kita gunakan? setAttribute() jawabannya. Method ini membutuhkan dua buah argumen string yang merupakan nama dan nilai dari atributnya.
+
+someElement.setAttribute("attributName", "attributeValue");
+Mari kita ambil contoh. Terdapat struktur web sebagai berikut:
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Manipulating Attribute</title>
+</head>
+<body>
+<figure>
+   <img id="catImage" src="https://i.ibb.co/9WT6LG6/two-three.jpg" alt="three-cats" width="600px"/>
+   <figcaption id="caption">Tiga Anak Kucing</figcaption>
+</figure>
+</body>
+</html>
+Kita buka berkas HTML tersebut pada browser, maka akan muncul tampilan seperti ini:
+
+20191206210656377551e73dcde834cfbc655937d491ca.png
+
+Ada yang janggal pada informasi yang ditampilkan di website. Berdasarkan caption, gambar seharusnya menampilkan 3 ekor kucing. Kita akan coba memperbaikinya dengan mengubah nilai atribut src pada elemen <img id=”catImage”> melalui JavaScript. Kita bisa melakukannya dengan menuliskan kode seperti berikut:
+
+let catImage = document.querySelector("#catImage");
+catImage.setAttribute("src", "https://i.ibb.co/55VG7vL/three-cat.jpg");
+Jalankan kode berikut pada console browser kemudian gambar pada halaman akan berubah.
+
+20191206210828e70d7f61d0eed3220cb3dfa9ce676d99.gif
+
+Selain mengatur nilai atribut elemen, kita juga dapat mengambil nilai dari atribut elemen yang sedang diterapkan dengan menggunakan method getAttribute(). Method tersebut membutuhkan satu buah argumen string yang merupakan nama atribut dan akan mengembalikan nilai dari atribut tersebut. Contoh:
+
+catImage.getAttribute("src");
+
+
+201912062109281d9b246fdced2c3b373982d31e81c406.gif
+
+
+Memanipulasi Konten Elemen
+Dengan JavaScript juga kita dapat mengubah konten yang ada di dalam HTML. Konten pada elemen disimpan di dalam properti innerHTML (konten dalam bentuk HTML) atau innerText (konten dalam bentuk Teks). Hasilnya, dalam memanipulasi konten kita dapat melakukannya dengan mengubah nilai dari properti tersebut.
+
+let caption = document.querySelector("#caption");
+caption.innerHTML = '<em>Tiga Anak Kucing</em>'
+20191206211034f7e98bc4442ee0ae877f5d985ee4ff54.gif
+
+Lihat perubahan terjadi pada caption gambar! Sekarang caption gambar tampak miring karena kita membungkus teks dalam elemen emphasize. Kita dapat memberikan nilai HTML pada konten elemen dengan menggunakan properti innerHTML.
+
+Berbeda ketika kita menggunakan innerText, nilai apapun yang terdapat pada properti ini adalah merupakan sebuah teks. Sehingga walaupun kita menginisialisasi teks yang merupakan sebuah tag html, maka teks tersebut akan tampil apa adanya tanpa terformat sebagai HTML.
+
+caption.innerText = "<em>Tiga Anak Kucing</em>";
+20191206211229e1e6cdfe215f0b7d627973f6b31c458d.gif
+
+Jadi pastikan kita tidak salah menggunakan properti ketika ingin mengubah konten dari elemen.
+
+Membuat dan Menambahkan Elemen Baru
+Sebenarnya terdapat beberapa cara dalam membuat elemen HTML baru menggunakan JavaScript. Bahkan kita bisa gunakan langsung properti innerHTML dengan menuliskan langsung tag HTML-nya kemudian menggabungkan dengan nilai yang ada pada elemen (appending). Tapi ini bukan pendekatan yang baik.
+
+Dalam membuat elemen baru, DOM telah menyediakan method yang bernama createElement().
+
+let newElement = document.createElement('p');
+2019120621141743158c5511e075447353ba40bf10a4c7.gif
+
+Dengan menjalankan perintah tersebut maka terciptalah elemen paragraf baru yang diinisialisasi pada variabel newElement.
+
+Pada variabel newElement kita dapat memberikan nilai konten dengan menggunakan properti innerHTML ataupun innerText.
+
+newElement.innerHTML = 'Anda menekan gambar kucing sebanyak <span id="count">0</span> kali';
+20191206211515600ba2d56fd0b189be4cb53fb086137a.gif
+
+Walaupun sekarang variabel newElement sudah memiliki konten di dalamnya, tetapi mengapa belum muncul pada jendela browser? Hal tersebut karena fungsi createElement() hanya akan membuat sebuah elemen baru, tidak berarti ia akan memasukkannya ke dalam document.body.
+
+Agar elemen baru tampil pada jendela browser, kita perlu memasukkan elemen tersebut pada body dengan menggunakan fungsi appendChild();
+
+document.body.appendChild(newElement);
+Sekarang elemen baru yang kita buat sudah tampil pada jendela browser.
+
+20191216171352408572f816751a6ec88e3bdd77725b2f.gif
+
+
+Menambahkan Aksi (Event) pada Element
+Selain mampu mengakses elemen dalam bentuk objek pada halaman, JavaScript juga mampu menerima event atau kejadian yang terjadi pada elemen. Hal tersebut dinamakan Event Handler. Event bisa berupa interaksi dari pengguna seperti click, atau sekedar mengarahkan kursor pada elemen. Dengan menerapkan event handler, kita dapat menjalankan suatu fungsi tertentu ketika event terjadi pada elemen.
+
+Untuk menambahkan Event Handler pada elemen kita gunakan method, addEventListener() pada target element. Method ini membutuhkan setidaknya dua buah argument.
+
+Yang pertama adalah sebuah string sebagai tipe event-nya. Ada banyak sekali tipe event yang dapat digunakan pada method addEventListener(), Anda bisa melihat secara lengkap pada tautan berikut: https://developer.mozilla.org/en-US/docs/Web/Events. Salah satu yang banyak digunakan adalah “click”. Event ini akan membaca kejadian dimana pengguna melakukan click pada element.
+
+Kemudian yang kedua adalah sebuah fungsi yang akan dijalankan ketika event terjadi. Pada fungsi ini kita dapat memberikan sebuah argumen yang merupakan object yang berisikan informasi tentang action yang terjadi. Termasuk informasi mengenai target elemen event-nya (event.target). Argumen ini biasanya diberikan nama “event”.
+
+Lihat kode berikut untuk menerapkan addEventListener() pada sebuah elemen.
+
+catImage.addEventListener('click', function(event) {
+   document.querySelector('#count').innerText++;
+});
+Dengan menjalankan kode tersebut pada latihan sebelumnya, berarti kita memberikan sebuah event ‘click’ pada elemen catImage. Ketika gambar kucing ditekan akan menjalankan fungsi yang menambahkan nilai konten pada elemen dengan id count.
+
+2019120621165194d0b715801d963efb335915806a7dff.gif
+
+Seperti itulah dasar-dasar dalam memanipulasi DOM dengan menggunakan JavaScript. Untuk mengimplementasikan apa yang sudah kita pelajari, pada materi selanjutnya kita akan coba terapkan logika pada Web Kalkulator agar dapat berfungsi dengan baik.
+

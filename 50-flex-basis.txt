@@ -1,0 +1,164 @@
+Flex Basis
+Selain menggunakan flex-grow, untuk menentukan ukuran flex item, kita bisa gunakan properti flex-basis. Properti ini mirip seperti width dalam menentukan dimensi box. Kita bisa menggunakan nilai satuan tetap seperti px, pt, pc, cm dll, atau kita juga bisa menggunakan satuan persentase %.
+
+Flex-grow ini digunakan ketika kita ingin menetapkan ukuran awal pada sebuah flex-item. Alhasil, kita dapat mengatur ukuran dengan lebih leluasa. Flex-grow biasa digunakan ketika kita menerapkan nested flex-container dan terdapat perbedaan jumlah child pada container-nya. Untuk lebih mudah menggambarkannya, perhatikan contoh berikut:
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       * {
+           box-sizing: border-box;
+       }
+       .container {
+           width: 800px;
+           border: 2px solid black;
+           margin: 0 auto;
+       }
+ 
+       .flex-column {
+           display: flex;
+           flex-direction: column;
+       }
+ 
+       .flex-row {
+           display: flex;
+           flex-direction: row;
+           flex-grow: 1;
+       }
+ 
+       .box {
+           flex-grow: 1;
+           background-color: cornflowerblue;
+           border: 2px solid black;
+           padding: 40px;
+           text-align: center;
+           color: white;
+           font-size: 1.5em;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <div class="flex-column">
+       <div class="flex-row">
+           <div class="box">1</div>
+           <div class="box">2</div>
+           <div class="box">3</div>
+           <div class="box">4</div>
+       </div>
+       <div class="flex-row">
+           <div class="box">5</div>
+           <div class="box">6</div>
+           <div class="box">7</div>
+       </div>
+   </div>
+</div>
+</body>
+</html>
+Output dari kode di atas adalah:
+
+20191206144921f95c0b125f43f78ad34c07608923f6dd.jpeg
+
+Pada contoh di atas kita memiliki satu buah flex-container column yang di dalamnya terdapat dua buah flex-container row. Kemudian flex-container row yang pertama memiliki empat buah flex-item, dan yang kedua memiliki tiga buah flex-item.
+
+Standarnya ketika kita menggunakan nilai flex-grow: 1 pada seluruh flex-item yang ada, maka tampilan akan seperti gambar di atas. Namun bagaimana jika kita ingin mengatur flex-item di row kedua dengan tampilan berbeda seperti di bawah ini?
+
+20191206144958012c203371189d71dc88d844acada7a7.png
+
+
+
+Jika kita menggunakan flex-grow, mungkin kita dapat memberikan nilai flex-grow: 2 pada box ke tujuh.
+
+....
+<div class="box double">7</div>
+...
+.....
+.double {
+   flex-grow: 2;
+}
+
+
+Namun hasilnya akan tampak seperti ini:
+
+2019120615082741b7bc150e43bc73fc76b5e6577d9f18.png
+
+Sebabya, properti flex-grow tidak menjamin elemen yang menerapkan nilai 2 akan lebih besar 2 kali lipat dari nilai 1.
+
+
+
+201912061508573098ceadafbfa2668b99a2c65f665e1f.gif
+
+Flex-grow akan mencari nilai yang sesuai yang dapat dibagi pada flex-items. Agak terdengar aneh, bukan? Nah, temukan artikel yang cukup menarik yang membahas permasalahan ini pada tautan berikut.
+
+Sebenarnya bisa saja kita menggunakan flex-grow untuk mendapatkan hasil yang diinginkan namun kita harus mencari nilai yang pas secara manual. Ini tentunya akan memakan waktu lebih.
+
+Pada kasus seperti ini, solusinya adalah menggunakan properti flex-basis. Dengan properti ini kita dapat asumsikan bahwa total ruang kosong pada flex-container adalah 100%. Jika dibagi rata terhadap empat buah flex-item, maka tiap itemnya harus memiliki nilai 25%.
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       * {
+           box-sizing: border-box;
+       }
+ 
+       .container {
+           width: 800px;
+           border: 2px solid black;
+           margin: 0 auto;
+       }
+ 
+       .flex-column {
+           display: flex;
+           flex-direction: column;
+       }
+ 
+       .flex-row {
+           display: flex;
+           flex-direction: row;
+           flex-grow: 1;
+       }
+ 
+       .box {
+           flex-basis: 25%;
+           background-color: cornflowerblue;
+           border: 2px solid black;
+           padding: 40px;
+           text-align: center;
+           color: white;
+           font-size: 1.5em;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <div class="flex-column">
+       <div class="flex-row">
+           <div class="box">1</div>
+           <div class="box">2</div>
+           <div class="box">3</div>
+           <div class="box">4</div>
+       </div>
+       <div class="flex-row">
+           <div class="box">5</div>
+           <div class="box">6</div>
+           <div class="box">7</div>
+       </div>
+   </div>
+</div>
+</body>
+</html>
+Output kode di atas adalah:
+
+201912061511374fc41f7e3a9cdb8404caa2fbfdfbc093.png
+
+Maka seluruh flex-items akan memiliki ukuran yang sama. Tetapi pada flex-container baris kedua terdapat 25% ruang bebas, karena jumlah flex-itemnya hanya tiga. Kita bisa menggunakan ruang kosong tersebut untuk membuat box tujuh lebih besar dua kali lipat dengan menggunakan nilai flex-basis: 50%;
+
+....
+<div class="box double">7</div>
+...
+.....
+.double {
+   flex-basis: 50%;
+}

@@ -1,0 +1,141 @@
+Kita sudah sampai di penghujung materi dari kelas ini. Selamat bagi Anda yang sudah menguasai dasar dari tiga pilar pembentuk website. Pada materi kali ini  kita akan berkenalan mengenai salah satu web API yang menarik untuk diterapkan pada proyek kalkulator, yakni Web Storage.
+
+Apa itu Web Storage?
+Web storage adalah salah satu Web API yang dapat menyimpan data secara lokal pada sisi client. Berbeda dengan objek atau array, data yang disimpan pada objek atau array JavaScript bersifat sementara, dan akan hilang jika terjadi reload atau pergantian URL pada browser. Sedangkan data yang disimpan pada Web Storage akan bertahan lebih lama karena data akan disimpan pada storage browser.
+
+Sebelum HTML5, kita melakukan hal ini dengan menggunakan cookies, namun penyimpanan cookies terbatas. Dengan hadirnya Web Storage kita dapat menampung data lebih besar dan tentunya lebih aman. 
+
+Data yang disimpan web storage tersedia berdasarkan domain. Artinya, data pada suatu domain web hanya dapat diakses oleh domainnya itu sendiri. Web storage dapat menampung sebesar 10MB untuk satu domain.
+
+Tipe Web Storage
+Web API menyediakan dua tipe Web Storage untuk kita gunakan, yakni sessionStorage dan localStorage.
+
+Sebelum menggunakan Web Storage baik sessionStorage atau localStorage, kita perlu memastikan browser support terhadap fitur tersebut, dengan cara:
+
+if (typeof(Storage) !== "undefined") {
+  // Browser mendukung sessionStorage/localStorage.
+} else {
+  // Browser tidak mendukung sessionStorage/LocalStorage
+}
+Seharusnya browser yang ada pada saat ini sudah mendukung kedua fitur tersebut. Google Chrome dan Mozilla Firefox tentu memilikinya.
+
+Pada sessionStorage atau localStorage data yang disimpan adalah nilai primitif seperti number, boolean, atau string. Namun kita juga dapat menyimpan data berbentuk objek dengan mengubahnya dalam bentuk string, begitu pula sebaliknya ketika kita ingin menggunakan datanya kembali.
+
+Untuk menyimpan dan mengakses data pada storage, metode yang digunakan adalah key-value. Di sini key menjadi sebuah kunci untuk mengakses data pada storage.
+
+Data yang disimpan pada Web Storage dapat kita lihat menggunakan DevTools pada tab Application (Google Chrome) atau tab Storage (Mozilla Firefox).
+
+2019120621470931ce9fbcd91f709b1faf8417eabd6532.jpeg
+
+Data Local Storage pada Google Chrome
+
+
+
+201912062147258a1dc4e07edf3529c068bca0127328a7.jpeg
+
+Data Local Storage pada Mozilla Firefox
+
+
+Session Storage
+Tipe storage yang pertama adalah Session Storage yang mana digunakan untuk menyimpan data sementara pada browser. Data akan hilang ketika browser atau tab browser ditutup.
+
+Untuk menggunakan Session Storage kita gunakan object sessionStorage, kemudian untuk menyimpan datanya gunakan method setItem(), method ini membutuhkan dua argumen yakni key dan nilai yang akan dimasukkan. Kemudian untuk mengakses data yang sudah dimasukkan kita gunakan method getItem() dan gunakan key sebagai argumen methodnya.
+
+Berikut contoh penerapan dari session storage:
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+   <title>Session Storage</title>
+</head>
+ 
+<body>
+   <p>Anda sudah menekan tombol sebanyak <span id="count"></span> kali</p>
+   <button id="button">Click Disini!</button>
+ 
+   <script>
+       const cacheKey = "NUMBER";
+       if (typeof(Storage) !== "undefined") {
+ 
+           // pengecekkan apakah data sessionStorage dengan key NUMBER tersedia atau belum
+           if (sessionStorage.getItem(cacheKey) === "undefined") {
+               // Jika belum maka akan atur dengan nilai awal yakni 0
+               sessionStorage.setItem(cacheKey, 0);
+           }
+ 
+           const button = document.querySelector("#button");
+           const count = document.querySelector("#count");
+           button.addEventListener('click', function(event) {
+               let number = sessionStorage.getItem(cacheKey);
+               number++;
+               sessionStorage.setItem(cacheKey, number);
+               count.innerText = sessionStorage.getItem(cacheKey);
+           })
+       } else {
+           alert("Browser tidak mendukung Web Storage")
+       }
+   </script>
+</body>
+ 
+</html>
+20191206214918049c9ee8ea00b53b8180b744e9862493.gif
+
+Bisa kita lihat bahwa data yang disimpan pada sessionStorage akan bertahan jika terjadi reload pada browser, namun data tersebut akan hilang apabila tab browser atau browser itu sendiri ditutup.
+
+
+
+Local Storage
+Tipe storage yang kedua adalah Local Storage yang serupa dengan session storage, namun data yang disimpan tidak akan hilang bila browser atau tabs browser ditutup. Kita bisa menghapus data pada local storage dengan method removeItem().
+
+Untuk penggunaan localStorage identik dengan sessionStorage, perbedaanya storage ini diakses melalui object localStorage.
+
+Berikut contoh penerapan dari local storage:
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+   <title>Local Storage</title>
+</head>
+ 
+<body>
+   <p>Anda sudah menekan tombol sebanyak <span id="count"></span> kali</p>
+   <button id="button">Click Disini!</button>
+   <button id="clear">Hapus Storage</button>
+ 
+   <script>
+       const cacheKey = "NUMBER";
+       if (typeof(Storage) !== "undefined") {
+ 
+           // pengecekkan apakah data sessionStorage dengan key NUMBER tersedia atau belum
+           if (localStorage.getItem(cacheKey) === "undefined") {
+               // Jika belum maka akan atur dengan nilai awal yakni 0
+               localStorage.setItem(cacheKey, 0);
+           }
+ 
+           const button = document.querySelector("#button");
+           const clearButton = document.querySelector("#clear")
+           const count = document.querySelector("#count");
+           button.addEventListener('click', function(event) {
+               let number = localStorage.getItem(cacheKey);
+               number++;
+               localStorage.setItem(cacheKey, number);
+               count.innerText = localStorage.getItem(cacheKey);
+           });
+ 
+           clearButton.addEventListener('click', function(event) {
+               localStorage.removeItem(cacheKey);
+           });
+       } else {
+           alert("Browser tidak mendukung Web Storage")
+       }
+   </script>
+</body>
+ 
+</html>
+20191206215045100580da075718404cc777290b0cbc7d.gif
+
+Pada gif di atas kita bisa mengetahui bahwa data yang disimpan pada localStorage akan bertahan walaupun jendela browser atau tab browser ditutup, untuk menghapus datanya bisa dengan tombol “Hapus Storage” dimana tombol tersebut akan memanggil method localStorage.removeItem().
+
+Bagaimana? Cukup mudah kan untuk menggunakan Web Storage? Selanjutnya kita akan coba terapkan localStorage pada Web Kalkulator yang kita buat untuk menampung riwayat kalkulasi yang pengguna lakukan.

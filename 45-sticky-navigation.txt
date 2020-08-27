@@ -1,0 +1,27 @@
+Membuat Sticky Navigation
+Ada satu fitur yang mungkin perlu diterapkan lagi pada halaman profil yang kita buat. Pada halaman profil sudah terdapat sebuah navigasi yang berfungsi untuk mengarahkan pengguna langsung pada informasi yang dipilih. Tetapi navigasi tersebut agak sulit diakses ketika pengguna melakukan scrolling pada halaman website. Pasalnya, navigasi tersebut selalu berada di bawah jumbotron website. Akibatnya, untuk mengakses navigasi yang dimaksud, pengguna perlu kembali melakukan scrolling ke atas hingga navigasi kembali terlihat. 
+
+Dari permasalahan di atas, sepertinya kita perlu meletakan navigasi yang menempel pada jendela browser, sehingga ketika user melakukan scrolling pada halaman website, navigasi tetap dapat dicangkup oleh pengguna untuk digunakan.
+
+Terdapat satu nilai properti position yang belum dibahas pada pembahasan positioning, yaitu sticky positioning yang merupakan nilai kombinasi dari relative positioning dan fixed positioning.
+
+Dengan menggunakan nilai sticky pada properti position, membuat navigasi dapat melekat pada jendela browser (layaknya fixed position) tetapi posisi awalnya tetap menempati posisi di mana ia seharusnya berada (layaknya relative position). Sehingga tampilan navigasi dapat memiliki sifat seperti ini:
+
+20191207000823498db682ad18c31b86db960f074f9425.gif
+
+Untuk menerapkannya cukup mudah, pertama kita tambahkan properti position dengan nilai sticky dan properti top dengan nilai 0 pada elemen <nav>.
+
+nav {
+   background-color: #00a2c6;
+   padding: 5px;
+   position: sticky;
+   top: 0;
+}
+Nilai top diperlukan agar ketika pengguna melakukan scrolling, elemen navigasi tetap berada di atas jendela browser.
+
+Bagaimana agar navigasi dapat menempel pada seluruh halaman? Buat elemen <header> sebagai induk dari elemen <nav> yang menerapkan properti display dengan nilai inline. Silakan tuliskan rule berikut pada berkas style.css.
+
+header {
+   display: inline;
+}
+Setelah menerapkannya, seharusnya kini  Navigasi pada halaman profil akan tampak seperti pada gif di atas.

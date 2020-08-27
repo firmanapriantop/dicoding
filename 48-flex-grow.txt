@@ -1,0 +1,58 @@
+Flex Grow
+Bisa kita lihat seluruh box di dalam container dapat menyesuaikan ukurannya sesuai ruang kosong yang ada pada container. Pada box, kita tidak menetapkan nilai dimensi seperti width dan height. Kita cukup menggunakan satu properti yakni flex-grow: 1;.
+
+Properti flex-grow ini digunakan untuk memberitahu berapa banyak ukuran yang harus ditetapkan oleh flex-item. Nilai dari properti ini bukan nilai dari dimensi asli pada flex item, melainkan nilai yang relatif terhadap ruang kosong pada flex container.
+
+Jika kita menetapkan nilai yang sama pada seluruh flex item, maka dimensi dari tiap flex item akan sama rata dan memenuhi ruang kosong yang ada pada container. Namun jika kita memberikan nilai yang berbeda dari salah satu itemnya, contohnya nilai yang lebih besar, maka flex item tersebut akan mencakup ukuran yang lebih besar. Flex item yang lain akan menyusut menyesuaikan agar tetap masuk pada ruang flex container. Contohnya seperti berikut:
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .container {
+           display: flex;
+ 
+           /* Properti lainnya */
+           width: 800px;
+           height: 250px;
+           background-color: #11C5C6;
+           border: 2px solid black;
+           padding: 20px;
+           border-radius: 10px;
+           margin: 0 auto;
+       }
+       .box {
+           /* properti lainnya */
+           background-color: #FBDD1C;
+           margin: 5px;
+           border: 2px solid black;
+           border-radius: 10px;
+       }
+ 
+       .first {
+           flex-grow: 1;
+       }
+       .second {
+           flex-grow: 2;
+       }
+ 
+       .third {
+           flex-grow: 1;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <div class="box first"></div>
+   <div class="box second"></div>
+   <div class="box third"></div>
+</div>
+</body>
+</html>
+Output dari kode di atas adalah:
+
+20191206135424989884835963e101aa8b4a839a024ba1.png
+
+Cara kerja flex-grow mirip seperti potongan kue. Ruang kosong pada elemen akan dibagi-bagi sesuai besaran nilainya. Contoh di atas memberi kita gambaran seperti sebuah kue dengan luas total 4, kemudian kue tersebut dipotong menjadi 3 potong. Potongan yang tengah mendapatkan 2 bagian dan potongan yang lainnya masing - masing mendapatkan 1 bagian. Maka potongan yang tengah akan lebih besar dari potongan yang lain.
+
+Betapa fleksibelnya bukan? Yang harus kita ingat, ketika kita mengubah ukuran dari suatu flex item, maka flex item yang lain pun akan terpengaruh

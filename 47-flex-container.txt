@@ -1,0 +1,46 @@
+Flex Container
+Flex container merupakan sebuah elemen yang menampung beberapa flex item. Karena Parent-child merupakan relasi yang wajib ada dalam penerapan flexbox, maka setiap flex item harus merupakan anak / child dari flex container.
+
+201912061348329ce0609d7130985d90a3ab0c012bf0ef.png
+
+Secara default deretan flex-item pada container ditampilkan secara horizontal. Ketika menggunakan flex, kita tidak perlu mengatur dimensi dari tiap flex item secara manual untuk mengisi ruang kosong pada container. Sebelum ada flexbox, hal ini jadi kendala umum. Alih-alih, kita harus melakukan perhitungan yang tepat agar tak terjadi overflow pada layout yang ditampilkan.
+
+Untuk membuat sebuah flex container kita gunakan properti display dengan nilai flex. Dengan demikian seluruh anak dari container tersebut akan menjadi flex item. Berikut contoh penerapan flexbox untuk membuat tampilan seperti gambar di atas:
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .container {
+           display: flex;
+ 
+           /* Properti lainnya */
+           width: 800px;
+           height: 250px;
+           background-color: #11C5C6;
+           border: 2px solid black;
+           padding: 20px;
+           border-radius: 10px;
+           margin: 0 auto;
+       }
+       .box {
+           flex-grow: 1;
+ 
+           /* properti lainnya */
+           background-color: #FBDD1C;
+           margin: 5px;
+           border: 2px solid black;
+           border-radius: 10px;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <div class="box"></div>
+   <div class="box"></div>
+   <div class="box"></div>
+</div>
+</body>
+</html>
+Output dari kode di atas adalah:
+

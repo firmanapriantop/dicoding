@@ -1,0 +1,97 @@
+Arrays dan Objek
+Kita sudah mengenal tipe data dasar yang ada pada JavaScript. Kali ini kita akan membahas mengenai array dan objek pada JavaScript. Keduanya dapat menampung lebih dari satu tipe data dasar yang digunakan untuk mengelola sebuah data.
+
+Arrays
+Array merupakan tipe data yang dapat mengelompokkan lebih dari satu nilai dari tipe data lain dengan menempatkannya pada satu variabel. Contoh:
+
+let myArray = ["Coklat", 42.5, 22, true, "Programming"];
+console.log(myArray);
+ 
+/* output:
+[ 'Coklat', 42.5, 22, true, 'Programming' ]
+*/
+Nilai - nilai yang berada pada array disusun dan diakses secara indexing. Untuk mengakses nilai di dalam array kita gunakan tanda kurung siku [] yang di dalamnya berupa angka yang merupakan posisi nilai yang ingin diakses.
+
+let myArray = ["Coklat", 42.5, 22, true, "Programming"];
+console.log(myArray[1]);
+ 
+/* output:
+42.5
+*/
+Yang perlu kita ketahui adalah nilai index dimulai dari angka 0. Terlihat pada contoh kode di atas, kita mengakses index ke-1 pada myArray. Nilai yang muncul adalah nilai ke-2 dari array tersebut, yakni 42.5. Jika kita tidak mengakses nilai array lebih dari index-nya maka hasilnya akan undefined. Index terakhir array selalu jumlah nilai array - 1.
+
+let myArray = ["Coklat", 42.5, 22, true, "Programming"];
+console.log(myArray[0]);
+console.log(myArray[1]);
+console.log(myArray[2]);
+console.log(myArray[3]);
+console.log(myArray[4]);
+console.log(myArray[5]);
+console.log("Panjang nilai myArray adalah " + myArray.length + ".");
+ 
+/* output:
+Coklat
+42.5
+22
+true
+Programming
+undefined
+Panjang nilai myArray adalah 5.
+*/
+
+
+Objek
+Objek serupa dengan array yang dapat menampung banyak nilai dengan tipe data yang beragam. Untuk mengelola data menggunakan objek, bedanya objek diakses tidak melalui indexing,  melainkan menggunakan pendekatan key-value. Untuk mengakses nilainya kita gunakan key. Key juga biasa disebut dengan properti.
+
+Untuk menetapkan objek pada variabel gunakan tanda kurung kurawal { } dalam menginisialisasinya. Kemudian di dalamnya kita tetapkan key: value.
+
+let object = {key1: "value1", key2: "value2", key3: "value3"}
+Dalam menentukan nama key, gunakanlah nama yang dapat mendeskripsikan dari value-nya. Pada value, kita dapat mengisikan nilai dengan tipe data apapun, termasuk array. Contoh:
+
+let user = {firstName: “Harry”, lastName: “Potter”,  age: 20, isMuggle: false, stuff: ["Wand", "Flying Car", "Owl"]}; 
+Dalam menuliskan objek, baris baru tidaklah penting dan tidak akan berpengaruh apa pun. Sehingga lebih baik setiap kita menetapkan key-value buatlah baris baru untuk memisahkan antar nilainya, hal ini akan memudahkan kita dalam memahami struktur data yang berada pada objek.
+
+let user = {
+    firstName: “Harry”,
+    lastName: “Potter”, 
+    age: 20, 
+    isMuggle: false,
+    stuff: ["Magic Wind", "Flying Car", "Owl"]
+};
+Kemudian untuk mengakses nilai dari properti objek kita dapat gunakan tanda titik diikuti dengan nama properti-nya. Contoh:
+
+console.log("Hallo, nama saya " + user.firstName + " " + user.lastName);
+console.log("Umur saya " + user.age + " tahun");
+ 
+/* output
+Hallo, nama saya Harry Potter
+Umur saya 20 tahun
+*/
+Bahkan dalam properti objek, kita dapat menyimpan nilai objek lainnya. Contohnya properti firstName dan lastName dapat dikelompokan kembali dalam sebuah objek baru sebagai berikut:
+
+let user = {
+    name: {
+        first: "Harry",
+        last: "Potter"
+    },
+    age: 20, 
+    isMuggle: false,
+    stuff: ["Magic Wind", "Flying Car", "Owl"]
+}
+Untuk mendapatkan nilainya kita perlu mengakses properti dari objek user kemudian name. Sehingga penulisannya menjadi seperti berikut:
+
+console.log("Hallo, nama saya " + user.name.first + " " + user.name.last);
+ 
+/* output
+Hallo, nama saya Harry Potter
+*/
+Mungkin seperti itulah gambaran mengenai objek di JavaScript, penting untuk Anda garis bawahi bahwa dalam mengelola banyak tipe data pada JavaScript, Anda dapat menggunakan array maupun objek. Pembahasan di atas cukup sebagai landasan pengetahuan mengenai dua hal itu ya.
+
+Berikut snippet code dari contoh kode yang digunakan pada materi di atas, Anda bisa mencobanya sendiri dengan mengubah struktur objek atau array dan menampilkannya pada console.
+
+https://glot.io/snippets/fi5zpzsh6w
+
+Banyak hal sebenarnya yang dapat diceritakan tentang dua hal ini, terutama untuk objek. Jika Anda ingin tahu lebih dalam, Anda bisa baca dokumentasinya pada tautan yang disediakan oleh MDN:
+
+Array : https://developer.mozilla.org/id/docs/Web/JavaScript/Reference/Global_Objects/Array
+Objek : https://developer.mozilla.org/id/docs/Web/JavaScript/Reference/Global_Objects/Object

@@ -1,0 +1,42 @@
+Menambahkan meta tag viewport
+Setelah berhasil membuat layout dengan menggunakan float, apakah terpikir bagaimana tampilan yang dihasilkan pada mobile device? Tampilan website kita terlihat baik ketika dibuka menggunakan laptop atau desktop tetapi belum tentu akan sama pada mobile device. 
+
+Pada browser Google Chrome dan Mozilla Firefox terdapat fitur inspection. Fitur ini sangat bermanfaat bagi developer web dalam membantu pengembangan website. Jika ingin mempelajari lebih lanjut mengenai fitur ini, Anda bisa melihat detailnya pada dokumentasi yang tersedia pada tautan berikut:
+
+Chrome page inspector (chrome dev tools)
+Mozilla Firefox page inspector
+
+Yang jelas pada inspector tersebut terdapat fitur di mana kita dapat mensimulasikan halaman website dalam tampilan mobile device atau tablet. Untuk membuka fitur inspector kita bisa gunakan shortcut ctrl + shift + i pada browser, atau dengan melakukan klik kanan -> inspect / inspect page.
+
+2019120623524071316eb7c4f3bd53cb9efb75dc2b085e.png
+Fitur Inspection pada Google Chrome
+
+20191206235425c71b4fdcf05d0eaf6a3e9ea538e36f65.png
+Fitur Inspection pada Mozilla Firefox
+
+Kedua gambar di atas menunjukan fitur dari inspection pada Google Chrome dan Mozilla Firefox. Untuk mensimulasikan tampilan pada mobile device, kita dapat menekan icon yang dilingkari pada gambar di atas.
+
+Dengan begitu inilah  tampilan seperti ini akan muncul:
+
+201912062355207a385c94342ee87b152dca8c44c9116a.png
+
+Di sini kita bisa memilih peranti apa yang akan digunakan untuk mensimulasikan halaman, untuk melihat tampilan dalam mobile devices, kita bisa memilih salah satu opsi handphone yang tersedia. Contohnya Pixel 2 XL.
+
+20191206235542f4f20c23df65f65d3c47432cba7f4b23.png
+
+Lalu setelah memilih tampilan pada mobile devices, apakah tampilan website sekarang sudah nampak baik? Tentu tidak, karena tampilan pada simulasi device di browser Google Chrome masih berantakan tampak seperti ini.
+
+201912062356434d816285eb628096b7d8e5daf9d436bc.gif
+
+
+
+Untuk mengatasinya, kita perlu menetapkan tag viewport agar dapat responsif pada peranti mobile.
+
+Viewport merupakan area yang dapat dilihat oleh pengguna kita pada halaman website. Ukuran viewport bervariasi berdasarkan device-nya. Ukuran viewport pada sebuah peranti mobile, lebih kecil dibandingkan dengan layar komputer.
+
+Sebelum adanya tablet ataupun handphone, halaman website didesain hanya untuk ukuran layar komputer. Dengan begitu banyak sekali website yang menerapkan tampilan dan ukuran yang static. Maka ketika halaman tersebut diakses melalui handphone atau tablet, ukuran akan terlalu besar untuk ditampilkan. Untuk mengatasi permasalahan tersebut kita perlu mengatur sebuah viewport pada halaman website kita.  
+
+Mengatur viewport dapat melalui sebuah tag <meta> yang disisipkan pada head berkas html. Silakan buka berkas index.html kemudian tambahkan script berikut di dalam <head>.
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+Sehingga sekarang tampilan pada mobile device menjadi seperti ini:

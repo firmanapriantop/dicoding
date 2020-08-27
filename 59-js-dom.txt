@@ -1,0 +1,40 @@
+Manipulasi DOM
+Sekarang kita sudah memahami bahasa JavaScript dan mengerti peran penggunaannya dalam browser melalui objek window. Tetapi ada satu hal lagi yang belum kita ketahui, yakni cara mengakses elemen pada dokumen HTML. 
+
+Pada materi kali ini kita akan eksplorasi tentang DOM Scripting, di mana nantinya kita dapat memanipulasi elemen, atribut elemen, dan teks yang tampak pada halaman. 
+
+Apa itu DOM?
+Sebelumnya disebutkan DOM Scripting, tapi sebenarnya apa itu DOM? Document Object Model (DOM) memberikan kita jalan untuk mengakses dan memanipulasi konten pada dokumen. DOM merupakan application programming interface (API) untuk HTML, XML atau SVG. Dengan DOM berkas HTML dapat direpresentasikan dalam bentuk objek yang dapat diakses oleh JavaScript (sebenarnya tidak hanya oleh JavaScript. DOM juga dapat diakses oleh bahasa pemrograman lain). Melalui DOM inilah JavaScript dapat memanipulasi elemen beserta atributnya pada HTML.
+
+Struktur objek DOM digambarkan seperti struktur node tree (pohon simpul). Disebut pohon karena strukturnya seperti pohon dengan batang induk tunggal yang bercabang menjadi beberapa cabang anak, masing-masing memiliki daun. Pada kasus ini induk tunggal batang merupakan elemen <html>, cabangnya merupakan anak elemen di dalamnya, dan daun adalah konten di dalam elemen tersebut.
+
+Mari kita ambil contoh pada struktur HTML berikut:
+
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>DOM Structure</title>
+   </head>
+   <body>
+       <h1>Hallo Developer!</h1>
+       <p>Belajar Dasar Pemrograman Web</p>
+   </body>
+</html>
+Berdasarkan HTML di atas, maka objek DOM memiliki struktur seperti ini:
+
+20191206205555a0e99b66183ecbee82e1d91e18a596fb.png
+
+Pada contoh yang diberikan di atas DOM terlihat seperti pemetaan dari sumber berkas HTML. Walaupun sama berkas HTML dan DOM adalah hal yang berbeda.
+
+Walaupun struktur dari DOM terbentuk berdasarkan berkas HTML, tetapi terdapat kasus tertentu yang menyebabkan struktur DOM berbeda dengan struktur HTML. Yakni kasus di mana kita terdapat kesalahan dalam menuliskan kode HTML.
+
+Mari kita lihat contohnya seperti berikut:
+
+<!DOCTYPE html>
+<html>
+Hello, World!
+</html>
+Pada berkas HTML di atas tidak terdapat elemen <head> dan <body>. Artinya berkas HTML tersebut tidak valid. Berbeda dengan DOM, walaupun struktur pada HTML tidak valid, pada DOM object structure akan diperbaiki. Caranya dengan menambahkan elemen <head> dan <body> secara otomatis kemudian menempatkan teks di dalam elemen <body>.
+
+20191206205647980cf27c493e6cc26e698f396c9fbbed.png
+

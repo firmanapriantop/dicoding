@@ -1,0 +1,127 @@
+lex Direction
+Seperti yang sudah kita ketahui sebelumnya, Flexbox merupakan directional agnostic, di mana kita dapat mengubah arah flex-item ditempatkan pada container. Secara default deretan flex-item ditampilkan secara horizontal, namun kita dapat mengubahnya dengan menetapkan properti flex-direction pada container-nya.
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .container {
+           display: flex;
+           flex-direction: column;
+ 
+           /* Properti lainnya */
+           width: 800px;
+           height: 250px;
+           background-color: #11C5C6;
+           border: 2px solid black;
+           padding: 20px;
+           border-radius: 10px;
+           margin: 0 auto;
+       }
+       .box {
+           /* properti lainnya */
+           background-color: #FBDD1C;
+           margin: 5px;
+           border: 2px solid black;
+           border-radius: 10px;
+       }
+ 
+       .first {
+           flex-grow: 3;
+       }
+       .second {
+           flex-grow: 2;
+       }
+ 
+       .third {
+           flex-grow: 1;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <div class="box first"></div>
+   <div class="box second"></div>
+   <div class="box third"></div>
+</div>
+</body>
+</html>
+Output dari kode di atas adalah:
+
+201912061431075bb53b4effe0d00fb6fe38bd12aa1052.png
+
+
+
+Ada empat nilai yang bisa digunakan untuk properti flex-direction, antara lain:
+
+row : merupakan nilai default, di mana deretan flex-item pada container ditampilkan secara horizontal.
+row-reverse : memiliki sifat yang sama seperti row, namun urutan flex item-nya ditukar.
+column : Deretan flex-item pada container ditampilkan secara vertikal.
+column-reverse : memiliki sifat yang sama seperti column, namun urutan flex item-nya ditukar.
+
+
+Karena properti flex-direction ini, kita dapat membuat dua dimensional layout dengan menempatkan flex container di dalam flex container, dalam arti lain sebuah flex container dapat memiliki child berupa flex container lain.
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .flex-column {
+           display: flex;
+           flex-direction: column;
+ 
+           /* properti lainnya */
+           width: 800px;
+           height: 300px;
+           padding: 20px;
+           margin: 0 auto;
+           border: 2px solid black;
+           border-radius: 10px;
+           background-color: #11C5C6;
+       }
+ 
+       .flex-row {
+           display: flex;
+           flex-direction: row;
+           flex-grow: 1;
+ 
+           /* properti lainnya */
+           padding: 20px;
+           margin: 5px;
+           background-color: #FBDD1C;
+           border: 2px solid black;
+           border-radius: 10px;
+       }
+ 
+       .box {
+           flex-grow: 1;
+ 
+           /* properti lainnya */
+           margin: 5px;
+           border: 2px solid black;
+           border-radius: 10px;
+           background-color: #fe899a;
+       }
+   </style>
+</head>
+<body>
+<div class="flex-column">
+   <div class="flex-row">
+       <div class="box"></div>
+       <div class="box"></div>
+       <div class="box"></div>
+   </div>
+   <div class="flex-row">
+       <div class="box"></div>
+       <div class="box"></div>
+       <div class="box"></div>
+   </div>
+</div>
+</body>
+</html>
+Output dari kode di atas adalah:
+
+201912061444303c458a92e2dc998dd415d719fdba91e7.png
+
+Hal ini yang akan kita gunakan nanti sebagai dasar dalam membangun layout kalkulator.
+
