@@ -17,7 +17,7 @@ function calculator($number1, $number2, $operation) {
             return "Error: Invalid operation";
     }
 }
-
+// tambah data
 // HTML Form untuk input
 ?>
 <!DOCTYPE html>
